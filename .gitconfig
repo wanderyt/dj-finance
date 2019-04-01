@@ -1,0 +1,9 @@
+[user]
+        email = wanderyt1988@163.com
+        name = wanderyt
+[alias]
+        co = checkout
+        br = branch
+        ci = commit
+        st = status
+        ru = remote update
