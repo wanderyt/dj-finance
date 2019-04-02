@@ -10,7 +10,7 @@ const express = require('express');
 // });
 
 const app = express();
-const port = process.env.API_PORT || 5000;
+const port = process.env.API_PORT || 4001;
 
 /**
  * Returns middleware that only parses JSON and only looks at requests where the Content-Type header matches the type option.
