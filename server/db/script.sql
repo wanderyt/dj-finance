@@ -15,7 +15,7 @@ CREATE TABLE FIN (
 
 -- Example 1: 插花
 INSERT INTO ACTIVITY(ID, NAME, DESC, DATE)
-VALUES(1, '插花', '萱萱爸爸教大家如果插花，做出一小瓶花艺。', '2019-03-21');
+VALUES(1, '插花', '萱萱爸爸教大家如何插花，做出一小瓶花艺。', '2019-03-21');
 INSERT INTO FIN(ACT_ID, NAME, DESC, AMOUNT)
 VALUES(1, '花', '花的开销', 300);
 INSERT INTO FIN(ACT_ID, NAME, DESC, AMOUNT)
@@ -25,7 +25,7 @@ VALUES(1, '泥土', '泥土的开销', 200);
 
 -- Example 2: 春游
 INSERT INTO ACTIVITY(ID, NAME, DESC, DATE)
-VALUES(2, '春游', '幼儿园大家一起去春游', '2019-04-28');
+VALUES(2, '春游', '幼儿园大家一起去春游。', '2019-04-28');
 INSERT INTO FIN(ACT_ID, NAME, DESC, AMOUNT)
 VALUES(2, '路费', '大巴的费用', 1000);
 INSERT INTO FIN(ACT_ID, NAME, DESC, AMOUNT)
