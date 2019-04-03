@@ -6,7 +6,7 @@ import './index.scss';
 const ACTIVITIES = [{
   id: 1,
   name: '插花',
-  desc: '萱萱爸爸教大家如果插花，做出一小瓶花艺。',
+  desc: '萱萱爸爸教大家如何插花，做出一小瓶花艺。',
   date: '2019-03-21',
   amount: 900,
 }, {
