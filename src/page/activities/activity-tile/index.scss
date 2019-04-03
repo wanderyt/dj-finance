@@ -1,0 +1,77 @@
+.ActivityTile {
+  min-width: 150px;
+  box-shadow:
+    0px 1px 3px 0px rgba(0,0,0,0.2),
+    0px 1px 1px 0px rgba(0,0,0,0.14),
+    0px 2px 1px -1px rgba(0,0,0,0.12);
+  border-radius: 4px;
+  background-color: #FFF;
+
+  .Activity--Item {
+    padding: 10px;
+  }
+
+  .Activity--Header {
+    .Activity--Name {
+      color: rgba(0, 0, 0, 0.87);
+      font-size: 17px;
+      font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+      font-weight: bold;
+      line-height: 20px;
+      letter-spacing: 0.15px;
+    }
+    .Activity--Date {
+      color: rgba(0, 0, 0, 0.54);
+      font-size: 14px;
+      font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0.15px;
+    }
+  }
+
+  .Activity--Content {
+    height: 45px;
+
+    .Activity--Desc {
+      color: rgba(0, 0, 0, 0.87);
+      font-size: 14px;
+      font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0.15px;
+    }
+  }
+
+  .Activity--Amount {
+    display: flex;
+    justify-content: space-between;
+    .Activity--AmountCaption {
+      color: rgba(0, 0, 0, 0.54);
+      font-size: 14px;
+      font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0.15px;
+    }
+    .Activity--AmountNumber {
+      color: rgba(223, 45, 13, 0.384);
+      font-size: 20px;
+      font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+      font-weight: bold;
+      line-height: 21px;
+      letter-spacing: 0.15px;
+    }
+  }
+
+  .Activity--Toolbar {
+    padding: 10px 6px;
+    .Activity--LearnMore {
+      min-width: 64px;
+      margin: 0 4px;
+      font-size: 0.8125rem;
+      color: #2196F3;
+      cursor: pointer;
+    }
+  }
+}

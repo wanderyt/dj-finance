@@ -3,7 +3,7 @@ import {Route} from 'react-router-dom';
 
 import CircularProgress from '@material-ui/core/CircularProgress';
 
-// const Webmaster = lazy(() => import(/* webpackChunkName: "page-webmaster" */ './pages/webmaster'));
+const Activities = lazy(() => import(/* webpackChunkName: "page-activities" */ './page/activities'));
 
 export default (props) => (
   <div>
@@ -15,7 +15,7 @@ export default (props) => (
       }>
       {/* React routers settings */}
       {/* <Route exact={true} path="/" component={Default}></Route> */}
-      {/* <Route path="/webmaster" component={Webmaster}></Route> */}
+      <Route path="/activities" component={Activities}></Route>
     </Suspense>
   </div>
 );

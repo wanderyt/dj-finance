@@ -1,0 +1,21 @@
+.Activities {
+  background-color: #EEEEEE;
+  height: 100vh;
+
+  .Activities--List {
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    .ActivityTile-Item {
+      margin: 10px;
+      width: 40%;
+      min-width: 180px;
+
+      @media (max-width: 400px) {
+        width: 90%;
+      }
+    }
+  }
+}
