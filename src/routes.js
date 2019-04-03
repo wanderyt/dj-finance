@@ -1,7 +1,8 @@
 import React, {Suspense, lazy} from 'react';
 import {Route} from 'react-router-dom';
 
-import CircularProgress from '@material-ui/core/CircularProgress';
+// import CircularProgress from '@material-ui/core/CircularProgress';
+import Spinner from './module/spinner';
 
 const Activities = lazy(() => import(/* webpackChunkName: "page-activities" */ './page/activities'));
 
@@ -10,7 +11,7 @@ export default (props) => (
     <Suspense
       fallback={
         <div className='LoadingProgress'>
-          <CircularProgress />
+          <Spinner />
         </div>
       }>
       {/* React routers settings */}
