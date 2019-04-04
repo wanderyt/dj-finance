@@ -15,6 +15,7 @@ const ActivityDetails = ({details}) => {
           ))
         }
         <div className='Activity--Total'>
+          <div className='Activity--TotalAmountCaption'>总计</div>
           <div className='Activity--TotalAmount'>{details.total}</div>
         </div>
       </div>
