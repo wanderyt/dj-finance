@@ -4,11 +4,8 @@ import {Link} from 'react-router-dom';
 import './index.scss';
 
 const navigationItems = [{
-  name: '查看所有活动',
+  name: '查看所有记录',
   link: '/activities'
-}, {
-  name: '查看单次活动',
-  link: '/activity'
 }];
 
 const Navigator = (props) => {

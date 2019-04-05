@@ -2,23 +2,38 @@ import React from 'react';
 
 import './index.scss';
 
-const ActivityDetails = ({details}) => {
+const ActivityDetails = ({type, details}) => {
   return (
     <div className='ActivityDetails'>
-      <div className='Activity--Items'>
-        {
-          details.items.map((item) => (
-            <div className='AmountItem'>
-              <div className='AmountName'>{item.name}</div>
-              <div className='Amount'>{item.amount}</div>
-            </div>
-          ))
-        }
-        <div className='Activity--Total'>
-          <div className='Activity--TotalAmountCaption'>总计</div>
-          <div className='Activity--TotalAmount'>{details.total}</div>
+      {
+        type === 2 &&
+        <div className='Activity--Items'>
+          {
+            details.items.map((item) => (
+              <div className='AmountItem'>
+                <div className='AmountName'>{item.name}</div>
+                <div className='Amount'>{item.amount}</div>
+              </div>
+            ))
+          }
+          <div className='Activity--Total'>
+            <div className='Activity--TotalAmountCaption'>总计</div>
+            <div className='Activity--TotalAmount'>{details.total}</div>
+          </div>
         </div>
-      </div>
+      }
+      {
+        type === 1 &&
+        <div className='Activity--Items'>
+          <div className='AmountItem'>
+            <div className='Amount'>{details.number} x {details.price}</div>
+          </div>
+          <div className='Activity--Total'>
+            <div className='Activity--TotalAmountCaption'>总计</div>
+            <div className='Activity--TotalAmount'>{details.total}</div>
+          </div>
+        </div>
+      }
     </div>
   );
 };

@@ -23,20 +23,35 @@
     }
   }
 
+  .Activities--LeftArea {
+    background-color: #FFF;
+    text-align: center;
+    padding: 10px 0 0;
+    font-size: 18px;
+    line-height: 30px;
+    height: 30px;
+    .Activities--LeftCaption {
+      font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    }
+    .Activities--LeftAmount {
+      color: rgba(4, 97, 24, 0.473);
+      font-weight: bold;
+    }
+  }
+
   .Activities--List {
-    padding: 10px 0px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 
     .ActivityTile-Item {
       margin: 10px;
-      width: 40%;
+      width: 90%;
       min-width: 180px;
 
-      @media (max-width: 400px) {
-        width: 90%;
-      }
+      // @media (max-width: 400px) {
+      //   width: 90%;
+      // }
     }
   }
 }
