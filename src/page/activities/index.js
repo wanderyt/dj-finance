@@ -1,45 +1,11 @@
 import React, {useState} from 'react';
 import ActivityTile from './activity-tile';
+import ACTIVITIES from './activities.json';
 
 import './index.scss';
 
-const ACTIVITIES = [{
-  id: 1,
-  name: '插花',
-  desc: '萱萱爸爸教大家如何插花，做出一小瓶花艺。',
-  date: '2019-03-21',
-  amount: 900,
-}, {
-  id: 2,
-  name: '春游',
-  desc: '幼儿园大家一起去春游。',
-  date: '2019-04-28',
-  amount: 4700,
-}, {
-  id: 3,
-  name: '插花',
-  desc: '萱萱爸爸教大家如何插花，做出一小瓶花艺。',
-  date: '2019-03-21',
-  amount: 900,
-}, {
-  id: 4,
-  name: '春游',
-  desc: '幼儿园大家一起去春游。',
-  date: '2019-04-28',
-  amount: 4700,
-}, {
-  id: 5,
-  name: '插花',
-  desc: '萱萱爸爸教大家如何插花，做出一小瓶花艺。',
-  date: '2019-03-21',
-  amount: 900,
-}, {
-  id: 6,
-  name: '春游',
-  desc: '幼儿园大家一起去春游。',
-  date: '2019-04-28',
-  amount: 4700,
-}];
+// const TYPE_INCOME = 1; // 收入
+// const TYPE_OUTCOME = 2; // 支出
 
 const Activities = (props) => {
   // const [isSelected, setIsSelected] = useState(false);
@@ -56,6 +22,15 @@ const Activities = (props) => {
   //   setSelectedAct({});
   // }
 
+  let leftAmount = 0;
+  ACTIVITIES.forEach((item) => {
+    if (item.type === 1) {
+      leftAmount += item.amount;
+    } else {
+      leftAmount -= item.amount;
+    }
+  })
+
   return (
     <div className='Activities'>
       {/* <div className='Activities--Header'>
@@ -68,6 +43,10 @@ const Activities = (props) => {
           }
         </span>
       </div> */}
+      <div className='Activities--LeftArea'>
+        <span className='Activities--LeftCaption'>剩余金额：</span>
+        <span className='Activities--LeftAmount'>{leftAmount}</span>
+      </div>
       <div className='Activities--List'>
         {
           ACTIVITIES.map((item) => (

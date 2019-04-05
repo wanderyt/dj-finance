@@ -12,57 +12,72 @@
   }
 
   .Activity--Header {
-    .Activity--Name {
-      color: rgba(0, 0, 0, 0.87);
-      font-size: 17px;
-      font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-      font-weight: bold;
-      line-height: 20px;
-      letter-spacing: 0.15px;
-    }
-    .Activity--Date {
-      color: rgba(0, 0, 0, 0.54);
-      font-size: 14px;
-      font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-      font-weight: 400;
-      line-height: 20px;
-      letter-spacing: 0.15px;
-    }
-  }
-
-  .Activity--Content {
-    height: 45px;
-
-    .Activity--Desc {
-      color: rgba(0, 0, 0, 0.87);
-      font-size: 14px;
-      font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-      font-weight: 400;
-      line-height: 20px;
-      letter-spacing: 0.15px;
-    }
-  }
-
-  .Activity--Amount {
     display: flex;
     justify-content: space-between;
-    .Activity--AmountCaption {
-      color: rgba(0, 0, 0, 0.54);
-      font-size: 14px;
-      font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-      font-weight: 400;
-      line-height: 20px;
-      letter-spacing: 0.15px;
+    align-items: center;
+
+    .Activity--Caption {
+      .Activity--Name {
+        color: rgba(0, 0, 0, 0.87);
+        font-size: 17px;
+        font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+        font-weight: bold;
+        margin: 2px 0;
+        letter-spacing: 0.15px;
+      }
+      .Activity--Date {
+        color: rgba(0, 0, 0, 0.54);
+        font-size: 14px;
+        font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+        font-weight: 400;
+        margin: 2px 0;
+        letter-spacing: 0.15px;
+      }
     }
-    .Activity--AmountNumber {
-      color: rgba(223, 45, 13, 0.384);
+
+    .Activity--AmountArea {
       font-size: 20px;
       font-family: "Roboto", "Helvetica", "Arial", sans-serif;
       font-weight: bold;
       line-height: 21px;
       letter-spacing: 0.15px;
+      .Activity--Income {
+        color: rgba(4, 97, 24, 0.473);
+        &::before {
+          content: '+ ';
+          color: rgba(4, 97, 24, 0.473);
+        }
+      }
+      .Activity--Outcome {
+        color: rgba(238, 37, 30, 0.979);
+        &::before {
+          content: '- ';
+          color: rgba(238, 37, 30, 0.979);
+        }
+      }
     }
   }
+
+  // .Activity--Amount {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   .Activity--AmountCaption {
+  //     color: rgba(0, 0, 0, 0.54);
+  //     font-size: 14px;
+  //     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  //     font-weight: 400;
+  //     line-height: 20px;
+  //     letter-spacing: 0.15px;
+  //   }
+  //   .Activity--AmountNumber {
+  //     color: rgba(223, 45, 13, 0.384);
+  //     font-size: 20px;
+  //     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  //     font-weight: bold;
+  //     line-height: 21px;
+  //     letter-spacing: 0.15px;
+  //   }
+  // }
 
   .Activity--Toolbar {
     padding: 10px 6px;

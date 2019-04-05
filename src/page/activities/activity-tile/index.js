@@ -4,28 +4,10 @@ import {formatDate} from '../util';
 import './index.scss';
 import ActivityDetails from './activity-details';
 
-const ActivityTile = ({id, name, desc, date, amount}) => {
+const ActivityTile = ({id, name, date, amount, type, details}) => {
   let [isExpanded, setIsExpanded] = useState(false);
-  let [details, setDetails] = useState({});
 
   const expandDetails = () => {
-    if (!details.items) {
-      const currentDetails = {
-        total: 900,
-        items: [{
-          name: '花',
-          amount: 300,
-        }, {
-          name: '花瓶',
-          amount: 400,
-        }, {
-          name: '包装纸',
-          amount: 200,
-        }]
-      };
-
-      setDetails(currentDetails);
-    }
     setIsExpanded(true);
   };
 
@@ -36,22 +18,26 @@ const ActivityTile = ({id, name, desc, date, amount}) => {
   return (
     <div className='ActivityTile'>
       <div className='Activity--Item Activity--Header'>
-        <div className='Activity--Name'>{name}</div>
-        <div className='Activity--Date'>{formatDate(date)}</div>
-      </div>
-      <div className='Activity--Item Activity--Content'>
-        <div className='Activity--Desc'>{desc}</div>
+        <div className='Activity--Caption'>
+          <div className='Activity--Name'>{name}</div>
+          <div className='Activity--Date'>{formatDate(date)}</div>
+        </div>
+        <div className='Activity--AmountArea'>
+          <div className={`Activity--Amount ${type === 1 ? 'Activity--Income' : 'Activity--Outcome'}`}>
+            {amount}
+          </div>
+        </div>
       </div>
       {
-        isExpanded && details ?
+        isExpanded && details &&
         <div className='Activity--Item'>
-          <ActivityDetails details={details} />
+          <ActivityDetails type={type} details={details} />
         </div>
-        :
-        <div className='Activity--Item Activity--Amount'>
-          <div className='Activity--AmountCaption'>花费金额：</div>
-          <div className='Activity--AmountNumber'>{amount}</div>
-        </div>
+        // :
+        // <div className='Activity--Item Activity--Amount'>
+        //   <div className='Activity--AmountCaption'>花费金额：</div>
+        //   <div className='Activity--AmountNumber'>{amount}</div>
+        // </div>
       }
       <div className='Activity--Item Activity--Toolbar'>
         {
