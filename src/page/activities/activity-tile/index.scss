@@ -8,13 +8,14 @@
   background-color: #FFF;
 
   .Activity--Item {
-    padding: 10px;
+    padding: 0 10px 10px;
   }
 
   .Activity--Header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 10px;
 
     .Activity--Caption {
       .Activity--Name {
@@ -58,29 +59,8 @@
     }
   }
 
-  // .Activity--Amount {
-  //   display: flex;
-  //   justify-content: space-between;
-  //   .Activity--AmountCaption {
-  //     color: rgba(0, 0, 0, 0.54);
-  //     font-size: 14px;
-  //     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  //     font-weight: 400;
-  //     line-height: 20px;
-  //     letter-spacing: 0.15px;
-  //   }
-  //   .Activity--AmountNumber {
-  //     color: rgba(223, 45, 13, 0.384);
-  //     font-size: 20px;
-  //     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  //     font-weight: bold;
-  //     line-height: 21px;
-  //     letter-spacing: 0.15px;
-  //   }
-  // }
-
   .Activity--Toolbar {
-    padding: 10px 6px;
+    padding: 0 6px 10px;
     .Activity--LearnMore, .Activity--Fold {
       min-width: 64px;
       margin: 0 4px;
