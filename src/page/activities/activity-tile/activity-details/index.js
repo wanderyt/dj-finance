@@ -12,7 +12,7 @@ const ActivityDetails = ({type, details}) => {
             details.items.map((item) => (
               <div className='AmountItem'>
                 <div className='AmountName'>{item.name}</div>
-                <div className='Amount'>{item.number} x {item.price}</div>
+                <div className='Amount'>{item.number} x {item.price} = {item.number * item.price}</div>
               </div>
             ))
           }
@@ -26,7 +26,7 @@ const ActivityDetails = ({type, details}) => {
         type === 1 &&
         <div className='Activity--Items'>
           <div className='AmountItem'>
-            <div className='Amount'>{details.number} x {details.price}</div>
+            <div className='Amount'>{details.number} x {details.price} = {details.number * details.price}</div>
           </div>
           <div className='Activity--Total'>
             <div className='Activity--TotalAmountCaption'>总计</div>
