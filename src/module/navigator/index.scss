@@ -5,22 +5,16 @@
     .Navigator__Item {
       position: relative;
       max-width: 160px;
-      height: 30px;
+      height: 40px;
       padding: 0 10px;
       box-shadow: 1px 1px 1px #f5f5f5;
 
       text-align: center;
 
       .Navigator__Item__Title {
-        line-height: 30px;
-        font-size: 12px;
+        line-height: 40px;
+        font-size: 16px;
         font-weight: bold;
-      }
-
-      .Navigator__ItemSeperater {
-        height: 20px;
-        line-height: 30px;
-        border-right: 1px solid grey;
       }
 
       &:after {
@@ -28,8 +22,8 @@
         position: absolute;
         right: 0px;
         top: 5px;
-        height: 20px;
-        line-height: 30px;
+        height: 30px;
+        line-height: 40px;
         border-right: 1px solid grey;
       }
     }
