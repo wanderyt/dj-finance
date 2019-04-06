@@ -1,12 +1,12 @@
 import React, {Suspense, lazy} from 'react';
 import {Route} from 'react-router-dom';
 
-// import CircularProgress from '@material-ui/core/CircularProgress';
 import Spinner from './module/spinner';
 
 import './routes.scss';
 
-const Activities = lazy(() => import(/* webpackChunkName: "page-activities" */ './page/activities'));
+const Activities = lazy(() => import(/* webpackChunkName: "page-activities" */ './page/activities/index'));
+const Charts = lazy(() => import(/* webpackChunkName: "page-charts" */ './page/charts'));
 
 export default (props) => (
   <div>
@@ -19,6 +19,7 @@ export default (props) => (
       {/* React routers settings */}
       <Route exact={true} path="/" component={Activities}></Route>
       <Route path="/activities" component={Activities}></Route>
+      <Route path="/charts" component={Charts}></Route>
     </Suspense>
   </div>
 );

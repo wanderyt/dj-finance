@@ -6,6 +6,9 @@ import './index.scss';
 const navigationItems = [{
   name: '查看所有记录',
   link: '/activities'
+}, {
+  name: '查看图表',
+  link: '/charts'
 }];
 
 const Navigator = (props) => {
