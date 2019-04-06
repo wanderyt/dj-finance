@@ -12,7 +12,7 @@ const ActivityDetails = ({type, details}) => {
             details.items.map((item) => (
               <div className='AmountItem'>
                 <div className='AmountName'>{item.name}</div>
-                <div className='Amount'>{item.amount}</div>
+                <div className='Amount'>{item.number} x {item.price}</div>
               </div>
             ))
           }

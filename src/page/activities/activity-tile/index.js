@@ -4,7 +4,7 @@ import {formatDate} from '../util';
 import './index.scss';
 import ActivityDetails from './activity-details';
 
-const ActivityTile = ({id, name, date, amount, type, details}) => {
+const ActivityTile = ({name, date, amount, type, details}) => {
   let [isExpanded, setIsExpanded] = useState(false);
 
   const expandDetails = () => {
