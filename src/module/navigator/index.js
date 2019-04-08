@@ -7,7 +7,10 @@ const navigationItems = [{
   name: '查看所有记录',
   link: '/activities'
 }, {
-  name: '查看图表',
+  name: '查看所有活动',
+  link: '/activity'
+}, {
+  name: '图表',
   link: '/charts'
 }];
 
