@@ -1,31 +1,31 @@
 import React from 'react';
-import PieChart from './pie-chart';
+import Highcharts from 'highcharts';
+import HighchartReact from "highcharts-react-official";
 import ACTIVITIES from '../activities-data.json';
+// import drilldown from 'highcharts-drilldown';
 
-const Charts = () => {
-  let leftAmount = 0, totalIncome = 0, details = [];
-  ACTIVITIES.forEach((item) => {
-    if (item.type === 1) {
-      leftAmount += item.amount;
-      totalIncome += item.amount;
-    } else {
-      leftAmount -= item.amount;
-      details.push({
-        name: item.name,
-        amount: item.amount
-      });
-    }
-  });
+import {buildOptions} from './helper';
+
+const HighChartTab = (prop) => {
+
+  // drilldown(Highcharts);
+
+  // // Set drill up button text
+  // Highcharts.setOptions({
+  //   lang: {
+  //     drillUpText: '<< 返回上一级'
+  //   }
+  // });
+
+  const options = buildOptions(ACTIVITIES);
 
   return (
-    <div className='Charts_Tab'>
-      <div className='PieChart--Container'>
-        <PieChart
-          details={details}
-          leftAmount={leftAmount} />
-      </div>
+    <div className='HighChartTab_Tab'>
+      <HighchartReact
+        highcharts={Highcharts}
+        options={options} />
     </div>
   );
 };
 
-export default Charts;
+export default HighChartTab;
