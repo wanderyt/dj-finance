@@ -47,6 +47,7 @@ export const buildOptions = (activities) => {
   });
 
   options.series = [{
+    name: '花费',
     colorByPoint: true,
     data: seriesData,
   }];
