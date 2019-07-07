@@ -1,6 +1,6 @@
 import React from 'react';
 import ActivityTile from './activity-tile';
-import ACTIVITIES from '../activities-data.json';
+import ACTIVITIES from '../activities-data';
 
 import './index.scss';
 

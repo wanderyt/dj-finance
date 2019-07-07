@@ -1,7 +1,7 @@
 import React from 'react';
 import Highcharts from 'highcharts';
 import HighchartReact from "highcharts-react-official";
-import ACTIVITIES from '../activities-data.json';
+import ACTIVITIES from '../activities-data';
 // import drilldown from 'highcharts-drilldown';
 
 import {buildOptions} from './helper';
