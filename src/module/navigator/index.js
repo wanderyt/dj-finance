@@ -9,6 +9,15 @@ const navigationItems = [{
 }, {
   name: '图表',
   link: '/charts'
+}, {
+  name: '图片',
+  link: '/testImages'
+}, {
+  name: '图片延迟',
+  link: '/testImagesLazyload'
+}, {
+  name: '天气',
+  link: '/weather'
 }];
 
 const Navigator = (props) => {
