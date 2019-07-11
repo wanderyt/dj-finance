@@ -10,6 +10,7 @@ const Charts = lazy(() => import(/* webpackChunkName: "page-charts" */ './page/c
 const TestImages = lazy(() => import(/* webpackChunkName: "page-testImages" */ './page/testImages'));
 const TestImagesLazyload = lazy(() => import(/* webpackChunkName: "page-testImagesLazyload" */ './page/testImagesLazyload'));
 const Weather = lazy(() => import(/* webpackChunkName: "page-weather" */ './page/weather'));
+const Wheather = lazy(() => import(/* webpackChunkName: "page-wheather" */ './page/weather/wheather'));
 
 export default (props) => (
   <div>
@@ -26,6 +27,7 @@ export default (props) => (
       {/* <Route path="/testImages" component={TestImages}></Route>
       <Route path="/testImagesLazyload" component={TestImagesLazyload}></Route> */}
       <Route path="/weather" component={Weather}></Route>
+      <Route path="/wheather" component={Wheather}></Route>
     </Suspense>
   </div>
 );
