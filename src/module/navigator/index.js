@@ -18,6 +18,9 @@ const navigationItems = [{
 }, {
   name: '天气',
   link: '/weather'
+}, {
+  name: '天气2',
+  link: '/wheather'
 }];
 
 const Navigator = (props) => {
