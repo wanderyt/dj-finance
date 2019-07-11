@@ -23,8 +23,8 @@ export default (props) => (
       <Route exact={true} path="/" component={Activities}></Route>
       <Route path="/activities" component={Activities}></Route>
       <Route path="/charts" component={Charts}></Route>
-      <Route path="/testImages" component={TestImages}></Route>
-      <Route path="/testImagesLazyload" component={TestImagesLazyload}></Route>
+      {/* <Route path="/testImages" component={TestImages}></Route>
+      <Route path="/testImagesLazyload" component={TestImagesLazyload}></Route> */}
       <Route path="/weather" component={Weather}></Route>
     </Suspense>
   </div>

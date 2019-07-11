@@ -6,6 +6,7 @@ const Weather = () => {
 
   useEffect(() => {
     Axios.get('https://www.apiopen.top/weatherApi?city=上海')
+    // Axios.get('/api/weather/getWeather')
       .then(({data}) => {
         setWeather(data);
       });
