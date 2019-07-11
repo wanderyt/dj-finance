@@ -22,8 +22,11 @@ const port = process.env.API_PORT || 4001;
 app.use(express.json());
 
 // define wacai unique request path
-// const wacaiRouters = require('./wacai/routers/index');
-// app.use('/api/wacai', wacaiRouters.router);
+const weatherRouters = require('./routers/weather');
+app.use('/api/weather', weatherRouters.router);
+
+const defaultRouters = require('./routers/default');
+app.use('/', defaultRouters.router);
 
 // Add wacai login middleware
 // const wacaiMiddleware = require('./wacai/middlewares/index');
