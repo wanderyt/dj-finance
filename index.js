@@ -22,32 +22,40 @@ const app = express();
 const path = require('path');
 
 // attach webpack middleware
-const webpack = require('webpack');
-const webpackConfigFactory = require('./config/webpack.config.js');
-const webpackConfig = webpackConfigFactory(process.env.DEV_MODE);
-const compiler = webpack(webpackConfig);
-/**
- * For HMR to work, use the webpack-dev-middleware and webpack-hot-middleware modules.
- * These will allow the Express app to track changes, and push those changes to the client code.
- */
-const isHMREnabled = process.env.REACT_APP_EXPRESS_HMR_ENABLED === 'true';
-if (isHMREnabled) {
-  app.use(
-    require('webpack-dev-middleware')(compiler, {
-      noInfo: true,
-      publicPath: webpackConfig.output.publichPath
-    })
-  );
+// const webpack = require('webpack');
+// const webpackConfigFactory = require('./config/webpack.config.js');
+// const webpackConfig = webpackConfigFactory(process.env.DEV_MODE);
+// const compiler = webpack(webpackConfig);
 
-  app.use(require('webpack-hot-middleware')(compiler));
-}
+// /**
+//  * For HMR to work, use the webpack-dev-middleware and webpack-hot-middleware modules.
+//  * These will allow the Express app to track changes, and push those changes to the client code.
+//  */
+// const isHMREnabled = process.env.REACT_APP_EXPRESS_HMR_ENABLED === 'true';
+// console.log(`isHMREnabled: `, isHMREnabled);
+// app.use(
+//   require('webpack-dev-middleware')(compiler, {
+//     // watchOptions: {
+//     //   ignored: '*'
+//     // },
+//     // watch: false,
+//     noInfo: true,
+//     stats: {
+//       colors: true
+//     },
+//     publicPath: webpackConfig.output.publichPath
+//   })
+// );
+// if (isHMREnabled) {
+//   app.use(require('webpack-hot-middleware')(compiler));
+// }
 
 // static assets
-app.use(express.static('public'));
+app.use(express.static('build'));
 
 // main route
 app.get('/', (req, res) => {
-  res.sendFile(path.resolve(__dirname, './public/index.html'));
+  res.sendFile(path.resolve(__dirname, './build/index.html'));
 });
 
 // app start up

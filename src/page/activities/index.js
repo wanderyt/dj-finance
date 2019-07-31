@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import {Link} from 'react-router-dom';
 import ActivityTile from './activity-tile';
 import ACTIVITIES from '../activities-data';
 
