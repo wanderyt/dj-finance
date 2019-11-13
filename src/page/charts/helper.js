@@ -4,7 +4,7 @@ export const buildOptions = (activities) => {
       type: 'pie'
     },
     title: {
-      text: '中五班班费使用情况'
+      text: '大五班班费使用情况'
     },
     plotOptions: {
       pie: {

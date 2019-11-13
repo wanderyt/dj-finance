@@ -1,9 +1,11 @@
 .ActivityDetails {
   .Activity--Items {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     .AmountItem {
-      height: 20px;
-      font-size: 12px;
-      line-height: 20px;
+      height: 25px;
+      font-size: 14px;
+      padding: 2px;
+      line-height: 25px;
       color: #87909A;
 
       .AmountName {
@@ -15,9 +17,10 @@
       }
     }
     .Activity--Total {
-      height: 20px;
-      font-size: 15px;
-      line-height: 20px;
+      height: 25px;
+      font-size: 14px;
+      padding: 2px;
+      line-height: 25px;
       font-weight: bold;
       border-top: 1px solid #87909A;
 
