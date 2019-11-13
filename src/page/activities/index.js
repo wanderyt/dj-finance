@@ -44,7 +44,7 @@ const Activities = () => {
 
   return (
     <div className='Activities'>
-      <div className='KeyContent'>
+      {/* <div className='KeyContent'>
         {
           linkClicked &&
           <div className='KeyContent-Container'>
@@ -67,7 +67,7 @@ const Activities = () => {
             <span>查看关键信息2</span>
           </a>
         </div>
-      </div>
+      </div> */}
       <div className='Activities--LeftArea'>
         <span className='Activities--LeftCaption'>剩余金额：</span>
         <span className='Activities--LeftAmount'>{leftAmount}</span>
