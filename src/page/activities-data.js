@@ -77,4 +77,22 @@ export default [{
       "price": 14.9
     }]
   }
+}, {
+  "id": 4,
+  "name": "毛衣活动",
+  "date": "2019-11-25",
+  "amount": 58.2,
+  "type": 2,
+  "details": {
+    "total": 29.2,
+    "items": [{
+      "name": "礼品袋",
+      "number": 1,
+      "price": 29.2
+    }, {
+      "name": "织围巾的板",
+      "number": 1,
+      "price": 29
+    }]
+  }
 }];
