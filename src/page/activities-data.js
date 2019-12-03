@@ -88,11 +88,25 @@ export default [{
     "items": [{
       "name": "礼品袋",
       "number": 1,
-      "price": 29.2
+      "price": 29.2,
     }, {
       "name": "织围巾的板",
       "number": 1,
-      "price": 29
+      "price": 29,
+    }]
+  }
+}, {
+  "id": 5,
+  "name": "空气净化器滤芯",
+  "date": "2019-12-03",
+  "amount": 518,
+  "type": 2,
+  "details": {
+    "total": 518,
+    "items": [{
+      "name": "空气净化器滤芯",
+      "number": 1,
+      "price": 518,
     }]
   }
 }];
