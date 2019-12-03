@@ -11,6 +11,9 @@ const ActivityDetails = ({type, details}) => {
       return number;
     }
   }
+  const checkDetails = () => {
+
+  }
   return (
     <div className='ActivityDetails'>
       {
@@ -19,7 +22,11 @@ const ActivityDetails = ({type, details}) => {
           {
             details.items.map((item) => (
               <div className='AmountItem'>
-                <div className='AmountName'>{item.name}</div>
+                <div
+                  className={`AmountName ${item.image ? 'Details' : ''}`}
+                  onClick={}>
+                  {item.name}
+                </div>
                 <div className='Amount'>
                   {/* {item.number} x {item.price} = {item.number * item.price} */}
                   {formatNumber(item.number * item.price)}
