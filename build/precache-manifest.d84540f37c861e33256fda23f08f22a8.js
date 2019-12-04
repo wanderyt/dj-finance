@@ -60,7 +60,7 @@ self.__precacheManifest = [
     "url": "/static/media/arrow.373e5005.svg"
   },
   {
-    "revision": "b11625284ea633504c8dc3757630d134",
+    "revision": "f6e9fb5f3caf03f19f4331670a87fe68",
     "url": "/index.html"
   }
 ];
